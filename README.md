@@ -7,18 +7,18 @@ This project is a JavaScript library for precise calculations. It is built on to
 To install the library, run the following command:
 
 ```bash
-npm install calculate.js
+npm install calc-expression
 ```
 
 ## Usage
 > ES module
 ```javascript
-import calculate from "calculate.js";
+import calculate from "calc-expression";
 console.log(calculate("0.1 + 0.2"));  // "0.3"
 ```
 > CommonJS
 ```javascript
-const  calculate = require("calculate.js");
+const  calculate = require("calc-expression");
 let a = 0.1; let b = 0.2;
 console.log(calculate(`${a} + ${b}`}));  // "0.3"
 ```
