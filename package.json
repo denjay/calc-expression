@@ -1,0 +1,30 @@
+{
+  "name": "calculate.js",
+  "version": "0.0.1",
+  "description": "A small and easier-to-use JavaScript library for arbitrary-precision decimal arithmetic.",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "type": "module",
+  "scripts": {
+    "test": "node ./dist/esm/test.js",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "precision",
+    "calculate",
+    "decimal"
+  ],
+  "author": "denjay",
+  "license": "ISC",
+  "dependencies": {
+    "bignumber.js": "^9.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
