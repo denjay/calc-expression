@@ -11,14 +11,19 @@ npm install calc-expression
 ```
 
 ## Usage
+
 > ES module
+
 ```javascript
 import calculate from "calc-expression";
-console.log(calculate("0.1 + 0.2"));  // "0.3"
+console.log(calculate("0.1 + 0.2")); // "0.3"
 ```
+
 > CommonJS
+
 ```javascript
 const  calculate = require("calc-expression").default;
 let a = 0.1; let b = 0.2;
 console.log(calculate(`${a} + ${b}`}));  // "0.3"
+console.log(calculate(`${a} + ((5 * ${b} ** 3) + 1) - (2e3 % 3) / 4`}));  // "0.64"
 ```
