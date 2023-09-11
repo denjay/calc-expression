@@ -1,6 +1,10 @@
 {
   "name": "calc-expression",
-  "version": "0.0.5",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/denjay/calc-expression.git"
+  },
   "description": "A small and easier-to-use JavaScript library for arbitrary-precision decimal arithmetic.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
