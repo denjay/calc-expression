@@ -12,3 +12,4 @@ console.log(expression, " = ", (0, index_js_1.default)(expression));
 console.log("0.1 + 0.2 = ", (0, index_js_1.default)("0.1 + 0.2"));
 console.log("-0.1 + 0.2 * (-1) = ", (0, index_js_1.default)("-0.1 + 0.2 * (-1)"));
 console.log("-(-1) = ", (0, index_js_1.default)("-(-1)"));
+console.log("2 % 0 + 3 = ", (0, index_js_1.default)("2 % 0 + 3"));

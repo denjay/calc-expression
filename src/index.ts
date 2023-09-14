@@ -11,7 +11,7 @@ const operatorRegString = operatorArrList
   .join("|");
 const floatRegString = String.raw`(?:\d+\.?\d*|\.\d+)`;
 const scientificRegString = String.raw`${floatRegString}[Ee][\+\-]?\d+`;
-const numberRegString = String.raw`(?:${scientificRegString}|${floatRegString})`;
+const numberRegString = String.raw`(?:NaN|${scientificRegString}|${floatRegString})`;
 const minUnitRegString = String.raw`(?:${numberRegString}|\(\s*[\+\-]?\s*${numberRegString}\s*\))`;
 const expressionRegString = String.raw`^\s*[\+\-]?(?:\s*${minUnitRegString}\s*(?:${operatorRegString}))*\s*${minUnitRegString}\s*$`;
 
