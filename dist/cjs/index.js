@@ -33,18 +33,12 @@ exports.default = calculate;
  */
 function calc(expression) {
     if (!expression.match(expressionRegString)) {
-        try {
-            eval(expression);
-        }
-        catch (error) {
-            throw new Error(`"${expression}" syntax error`);
-        }
         // 如果表达式含有子表达式(在括号里的算数表达式),先计算子表达式
         if (expression.match(/\(|\)/)) {
             expression = getExpressionWithoutParentheses(expression);
         }
         else {
-            return expression;
+            throw new Error(`"${expression}" error`);
         }
     }
     return calculateExpressionWithoutParentheses(expression);

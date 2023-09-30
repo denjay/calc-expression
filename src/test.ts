@@ -11,3 +11,6 @@ console.log("-0.1 + 0.2 * (-1) = ", calculate("-0.1 + 0.2 * (-1)"));
 console.log("-(-1) = ", calculate("-(-1)"));
 console.log("2 % 0 + 3 = ", calculate("2 % 0 + 3"));
 console.log("2 / 0 + 3 = ", calculate("2 / 0 + 3"));
+
+// error test
+// console.log("2 ^ 0 + 3 = ", calculate("2 ^ 0 + 3"));
