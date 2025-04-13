@@ -1,6 +1,6 @@
 {
   "name": "calc-expression",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/denjay/calc-expression.git"
@@ -37,10 +37,10 @@
   "author": "denjay",
   "license": "ISC",
   "dependencies": {
-    "bignumber.js": "^9.1.2"
+    "decimal.js": "^10.5.0"
   },
   "devDependencies": {
-    "tsx": "^3.12.10",
-    "typescript": "^5.2.2"
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
   }
 }

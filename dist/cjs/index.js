@@ -3,7 +3,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const bignumber_js_1 = __importDefault(require("bignumber.js"));
+exports.default = calculate;
+const decimal_js_1 = __importDefault(require("decimal.js"));
 // 根据不同的优先级区分,越靠前,优先级越高
 const operatorArrList = [["**"], ["*", "/", "%"], ["+", "-"]];
 const operatorRegString = operatorArrList
@@ -24,7 +25,6 @@ function calculate(expression) {
     }
     return calc(expression).replace(/\(|\)/g, "");
 }
-exports.default = calculate;
 /**
  * 递归计算,直到不包含子表达式为止
  *
@@ -143,13 +143,13 @@ function calculateExpressionWithoutParentheses(expression) {
  */
 function operate(leftString, rightString, operator) {
     const operatorInfo = {
-        "**": "exponentiatedBy",
-        "*": "multipliedBy",
-        "/": "dividedBy",
-        "%": "modulo",
+        "**": "pow",
+        "*": "mul",
+        "/": "div",
+        "%": "mod",
         "+": "plus",
         "-": "minus",
     };
-    return (0, bignumber_js_1.default)(leftString)[operatorInfo[operator]]((0, bignumber_js_1.default)(rightString))
+    return new decimal_js_1.default(leftString)[operatorInfo[operator]](new decimal_js_1.default(rightString))
         .toString();
 }

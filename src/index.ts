@@ -1,4 +1,4 @@
-import BigNumber from "bignumber.js";
+import Decimal from "decimal.js";
 
 // 根据不同的优先级区分,越靠前,优先级越高
 const operatorArrList = [["**"], ["*", "/", "%"], ["+", "-"]];
@@ -157,14 +157,14 @@ function calculateExpressionWithoutParentheses(expression: string) {
  */
 function operate(leftString: string, rightString: string, operator: string) {
   const operatorInfo: Record<string, string> = {
-    "**": "exponentiatedBy",
-    "*": "multipliedBy",
-    "/": "dividedBy",
-    "%": "modulo",
+    "**": "pow",
+    "*": "mul",
+    "/": "div",
+    "%": "mod",
     "+": "plus",
     "-": "minus",
   };
-  return (BigNumber(leftString) as { [key: string]: any })
-    [operatorInfo[operator]](BigNumber(rightString))
+  return (new Decimal(leftString) as { [key: string]: any })
+    [operatorInfo[operator]](new Decimal(rightString))
     .toString();
 }
